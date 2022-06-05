@@ -1,5 +1,5 @@
 import {FavList, LS_FAVLIST_PARAM} from './FavList'
-import {act, fireEvent, render, screen, waitFor} from "@testing-library/react";
+import {fireEvent, render, screen} from "@testing-library/react";
 
 const MOCK_PRODUCT_ID = '123'
 
@@ -25,10 +25,6 @@ describe('FavList', () => {
         }
         Object.defineProperty(window, 'localStorage', {value: LocalStorageMock})
     })
-
-    // beforeEach(() => {
-    //     LocalStorageMock
-    // })
 
     afterEach(() => {
         jest.restoreAllMocks()
